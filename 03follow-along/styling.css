@@ -1,0 +1,11 @@
+.h3-like {
+  font-size: 1.17em;   /* visual h3 size */
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;           /* ← THIS removes the line breaks */
+  padding: 2px 0;      /* optional: small spacing without actual gaps */
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
