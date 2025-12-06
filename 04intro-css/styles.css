@@ -67,13 +67,15 @@ header span {
 
 nav {
   background-color: var(--color-nav-bg);
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;                 /* flexbox horizontal layout */
+  display: flex;
   justify-content: center;
 }
 
