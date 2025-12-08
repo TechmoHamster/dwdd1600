@@ -71,10 +71,10 @@ nav {
 
 /* Flexbox - nav links horizontal */
 nav ul {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
   justify-content: center;
 }
 
