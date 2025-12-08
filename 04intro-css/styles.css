@@ -69,7 +69,6 @@ nav {
   background-color: var(--color-nav-bg);
 }
 
-/* Flexbox - nav links horizontal */
 nav ul {
   display: flex;
   list-style: none;
