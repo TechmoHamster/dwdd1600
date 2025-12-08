@@ -152,10 +152,6 @@ nav a.active {
   color: var(--color-nav-bg);
 }
 
-/* Hamburger Manu - Hidden Desktop Toggle */
-.nav-toggle {
-  display: none;
-}
 
 /* =============================== */
 /*  HERO IMAGE SECTION             */
@@ -352,25 +348,19 @@ footer p {
 
 
 /* =============================== */
-/*  Mobile Navigation (≤ 800px)    */
+/*  MOBILE MEDIA QUERIES           */
 /* =============================== */
-@media only screen and (max-width: 800px) {
 
-  /* ----- Layout Reset ----- */
+/* ---------- Mobile Navigation ---------- */
+@media only screen and (max-width: 800px) {
   nav .site-container {
     padding: 0;
   }
 
-  /* ----- Mobile Men ----- */
   nav ul {
-    display: none;
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
-    background-color: var(--color-nav-bg);
-  }
-
-  nav ul.open {
-    display: flex;
   }
 
   nav li {
@@ -383,78 +373,9 @@ footer p {
     text-align: center;
     border-bottom: 1px solid var(--color-footer-bg);
   }
-
-  /* =============================== */
-  /*  Hamburger Button Layout        */
-  /* =============================== */
-
-  .nav-toggle {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* ----- Hamburger Icon ----- */
-  .bars {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-  }
-
-  .bar {
-    width: 28px;
-    height: 3px;
-    background-color: var(--color-nav-text);
-    transition: all 0.3s ease;
-  }
-
-  /* ----- Menu Label ----- */
-  .menu-label {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-nav-text);
-  }
-
-  /* ----- Hamburger Manu Animation ----- */
-  .nav-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  /* Hide "Menu" label when open */
-  .nav-toggle.active .menu-label {
-    opacity: 0;
-  }
-
 }
 
-/* =============================== */
-/*  MOBILE MEDIA QUERIES           */
-/* =============================== */
+/* ---------- Small-Screen Spacing & Typography ---------- */
 @media (max-width: 600px) {
   header {
     padding: 0.75rem 1rem 0.5rem 1rem;
@@ -465,7 +386,7 @@ footer p {
   }
 
   nav a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.75rem 0.9rem;
   }
 
