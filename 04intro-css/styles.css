@@ -67,10 +67,9 @@ header span {
 
 nav {
   background-color: var(--color-nav-bg);
-  display: flex;
-  justify-content: center;
 }
 
+/* Flexbox - nav links horizontal */
 nav ul {
   list-style: none;
   margin: 0;
@@ -84,23 +83,23 @@ nav li {
 }
 
 nav a {
-  display: inline-block;
+  display: block;
   padding: 0.9rem 1.5rem;
   text-decoration: none;
-  font-family: "Bebas Neue", system-ui, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-nav-text);
 }
 
-/* Hover state for nav links */
+/* Hover state */
 nav a:hover {
   background-color: var(--color-accent-blue);
   color: var(--color-nav-bg);
 }
 
-/* Wayfinding - active page link */
+/* Wayfinding */
 nav a.active {
   background-color: var(--color-accent-orange);
   color: var(--color-nav-bg);
