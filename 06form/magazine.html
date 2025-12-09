@@ -6,7 +6,6 @@
     <meta name="author" content="Zach Johnson">
     <meta name="description" content="CarGuyz is the ultimate car enthusiast hub for builds, meets, and tuning tips.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -36,77 +35,36 @@
         <!-- FIELDSET 1 — PERSONAL INFO -->
         <fieldset>
           <legend>Subscriber Information</legend>
-
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" required>
-
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone">
-
-          <label for="frequency">Delivery Frequency</label>
-          <select id="frequency" name="frequency" required>
-            <option value="">Select an option</option>
-            <option value="weekly">Weekly</option>
-            <option value="monthly">Monthly</option>
-            <option value="quarterly">Quarterly</option>
-          </select>
-
-          <label for="comments">Additional Notes / What You Drive</label>
-          <textarea id="comments" name="comments" rows="4"></textarea>
-
+          <label for="fullname">Full Name<input type="text" id="fullname" name="fullname" required></label>
+          <label for="email">Email Address<input type="email" id="email" name="email" required></label>
+          <label for="phone">Phone Number<input type="tel" id="phone" name="phone"></label>
+          <label for="frequency">Delivery Frequency
+            <select id="frequency" name="frequency" required>
+              <option value="">Select an option</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Quarterly</option>
+            </select>
+          </label>
+          <label for="comments">Additional Notes / What You Drive<textarea id="comments" name="comments" rows="4"></textarea></label>
         </fieldset>
 
         <!-- FIELDSET 2 — SUBSCRIPTION TYPE -->
         <fieldset>
           <legend>Choose Your Magazine Style</legend>
-
-          <label>
-            <input type="radio" name="subscription" value="digital" required>
-            Digital Edition
-          </label>
-
-          <label>
-            <input type="radio" name="subscription" value="print">
-            Print Edition
-          </label>
-
-          <label>
-            <input type="radio" name="subscription" value="both">
-            Both (Digital + Print)
-          </label>
+          <label><input type="radio" name="subscription" value="digital">Digital Edition</label>
+          <label><input type="radio" name="subscription" value="print">Print Edition</label>
+          <label><input type="radio" name="subscription" value="both">Both (Digital + Print)</label>
         </fieldset>
 
         <!-- FIELDSET 3 — TOPIC INTERESTS -->
         <fieldset>
           <legend>Car Topics You Want Covered</legend>
-
-          <label>
-            <input type="checkbox" name="topics" value="performance">
-            Performance Mods
-          </label>
-
-          <label>
-            <input type="checkbox" name="topics" value="detailing">
-            Detailing &amp; Cleaning
-          </label>
-
-          <label>
-            <input type="checkbox" name="topics" value="track">
-            Track Day Tips
-          </label>
-
-          <label>
-            <input type="checkbox" name="topics" value="projects">
-            Project Car Features
-          </label>
-
-          <label>
-            <input type="checkbox" name="topics" value="meets">
-            Car Meet Alerts
-          </label>
+          <label><input type="checkbox" name="topics" value="performance">Performance Mods</label>
+          <label><input type="checkbox" name="topics" value="detailing">Detailing &amp; Cleaning</label>
+          <label><input type="checkbox" name="topics" value="track">Track Day Tips</label>
+          <label><input type="checkbox" name="topics" value="projects">Project Car Features</label>
+          <label><input type="checkbox" name="topics" value="meets">Car Meet Alerts</label>
         </fieldset>
 
         <!-- SUBMIT BUTTON -->
