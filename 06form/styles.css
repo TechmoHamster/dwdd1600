@@ -274,6 +274,11 @@ main a:hover {
 /*  Magazine Form Styling          */
 /* =============================== */
 
+.mag-form input[type=text] {}
+.mag-form input[type=email] {}
+.mag-form input[type=tel] {}
+.mag-form button[type=submit] {}
+
 .mag-form {
   display: flex;
   flex-direction: column;
