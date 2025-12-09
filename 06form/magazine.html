@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CarGuyz: Ultimate Car Enthusiast Hub</title>
+    <meta name="author" content="Zach Johnson">
+    <meta name="description" content="CarGuyz is the ultimate car enthusiast hub for builds, meets, and tuning tips.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+  <!-- start the page head -->
+  <header>
+    <span>Magazine</span>
+  </header>
+
+    <!-- start the page navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Car Enthuiast Hub</a></li>
+        <li><a href="garage.html">Garage &amp; Builds</a></li>
+        <li><a href="featured.html">Featured Cars</a></li>
+        <li><a class="active" href="magazine.html">Magazine</a></li>
+      </ul>
+    </nav>
+
+    <!-- start the page main content -->
+    <main>
+      <h1>CarGuyz Magazine Signup</h1>
+      <p>Join our exclusive monthly magazine for enthusiasts who want the latest builds, mods, meetups, and track insights.</p>
+
+      <form action="thanks.html" method="GET" class="mag-form">
+
+        <!-- FIELDSET 1 — PERSONAL INFO -->
+        <fieldset>
+          <legend>Subscriber Information</legend>
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="frequency">Delivery Frequency</label>
+          <select id="frequency" name="frequency" required>
+            <option value="">Select an option</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+          </select>
+
+          <label for="comments">Additional Notes / What You Drive</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+
+        </fieldset>
+
+        <!-- FIELDSET 2 — SUBSCRIPTION TYPE -->
+        <fieldset>
+          <legend>Choose Your Magazine Style</legend>
+
+          <label>
+            <input type="radio" name="subscription" value="digital" required>
+            Digital Edition
+          </label>
+
+          <label>
+            <input type="radio" name="subscription" value="print">
+            Print Edition
+          </label>
+
+          <label>
+            <input type="radio" name="subscription" value="both">
+            Both (Digital + Print)
+          </label>
+        </fieldset>
+
+        <!-- FIELDSET 3 — TOPIC INTERESTS -->
+        <fieldset>
+          <legend>Car Topics You Want Covered</legend>
+
+          <label>
+            <input type="checkbox" name="topics" value="performance">
+            Performance Mods
+          </label>
+
+          <label>
+            <input type="checkbox" name="topics" value="detailing">
+            Detailing &amp; Cleaning
+          </label>
+
+          <label>
+            <input type="checkbox" name="topics" value="track">
+            Track Day Tips
+          </label>
+
+          <label>
+            <input type="checkbox" name="topics" value="projects">
+            Project Car Features
+          </label>
+
+          <label>
+            <input type="checkbox" name="topics" value="meets">
+            Car Meet Alerts
+          </label>
+        </fieldset>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="submit-btn">Subscribe</button>
+
+      </form>
+    </main>
+
+    <footer>
+        <p>
+          &copy; 2025 &bull; Zach Johnson &bull; Web Essentials
+        </p>
+    </footer>
+  </body>
+</html>
