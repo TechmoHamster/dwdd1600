@@ -390,6 +390,10 @@ main a:hover {
   border: 0;
 }
 
+.audio p {
+   padding-top: 0.85rem;
+}
+
 /* =============================== */
 /*  MAGAZINE PAGE - FORM STYLING   */
 /* =============================== */
