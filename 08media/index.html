@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CarGuyz: Ultimate Car Enthusiast Hub</title>
+    <meta name="author" content="Zach Johnson">
+    <meta name="description" content="CarGuyz is the ultimate car enthusiast hub for builds, meets, and tuning tips.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
 
+  <body>
+    <!-- start the page head -->
+    <header>
+      <div class="site-container">
+        <div class="logo-group">
+          <img src="pics/logo.png" alt="CarGuyz Logo" class="site-logo">
+          <div class="site-title">
+            <h1>Car Guyz</h1>
+            <p>Ultimate Enthusiast Site</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- start the page navigation -->
+    <nav>
+      <div class="site-container"></div>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <div class="bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <span class="menu-label">Menu</span>
+        </button>
+        <ul>
+          <li><a class="active" href="index.html">Car Enthuiast Hub</a></li>
+          <li><a href="garage.html">Garage &amp; Builds</a></li>
+          <li><a href="featured.html">Featured Cars</a></li>
+          <li><a href="magazine.html">Magazine</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="location.html">Location</a></li>   
+        </ul>
+      </div>
+    </nav>
+
+    <!-- start the page main content -->
+    <main>
+      <h1>Welcome to CarGuyz</h1>
+
+      <figure class="hero">
+        <img src="pics/hero.jpg" alt="Fast Cars Hero Image">
+      </figure>
+
+      <h2>What Is CarGuyz?</h2>
+      <p>
+        CarGuyz is a community for people who <strong>live and breathe cars</strong>. From daily drivers and project builds
+        to track toys and dream garage ideas. If you love the sound of a cold start, you’re in the right place.
+      </p>
+
+      <h2>Who This Site Is For</h2>
+      <p>
+        Whether you are just getting into modding your first car or you have owned more builds than you can count,
+        CarGuyz gives you inspiration, practical advice, and a place to share your story.
+      </p>
+
+      <h2>What You’ll Find Here</h2>
+      <p>
+        On this site you will find organized lists of essential tools, recommended mods, and a peek into featured builds.
+        Use the navigation above to jump into the <em>Garage &amp; Builds</em> page and start exploring.
+      </p>
+
+      <p>
+        Here are a few things we focus on:
+      </p>
+
+      <!-- Unordered list -->
+      <ul>
+        <li>Budget-friendly performance upgrades</li>
+        <li>Detailing and cleaning tips</li>
+        <li>Meetups, cruises, and car shows</li>
+      </ul>
+
+      <!-- Ordered list -->
+      <h2>Getting Started With Your First Build</h2>
+      <ol>
+        <li>Set a realistic budget and timeline.</li>
+        <li>Decide the purpose of the car: daily driver, show car, or track build.</li>
+        <li>Plan mods in stages instead of buying everything at once.</li>
+        <li>Research each part and read reviews before you buy.</li>
+      </ol>
+
+      <!-- Definition list -->
+      <h2>Basic CarGuyz Terms</h2>
+      <dl>
+        <dt><b>Daily Driver</b></dt>
+        <dd>&bull; Your main car that you rely on to get to work, school, and back home.</dd>
+
+        <dt><b>Project Car</b></dt>
+        <dd>&bull; A car you work on over time, upgrading, restoring, or modifying for fun.</dd>
+
+        <dt><b>Track Day</b></dt>
+        <dd>&bull; An event where you can safely drive your car at speed on a closed course.</dd>
+      </dl>
+      <hr>
+      <p>
+        <u>Need parts or tools?</u>
+        <br>
+        Check out some of our favorite sites:
+        &bull; <a href="https://www.summitracing.com" target="_blank">Summit Racing</a>
+        &bull; <a href="https://www.rockauto.com" target="_blank">RockAuto</a>
+      </p>
+
+      <p>
+        <u>Have questions?</u>
+        <br>
+        Call us at <a href="tel:8015550123">801-555-0123</a>
+        and we’ll point you in the right direction.
+      </p>
+      <br>
+    </main>
+
+    <!-- OPEN FORM BUTTON -->
+    <button id="openFormBtn" class="open-modal-btn">Join Newsletter</button>
+
+    <!-- MODAL BACKDROP -->
+    <div id="modalBackdrop" class="modal-backdrop">
+      
+      <!-- MODAL BOX -->
+      <div class="modal-box">
+        
+        <button class="close-modal-btn" id="closeFormBtn">&times;</button>
+        
+        <h2>Sign Up</h2>
+        <p id="signupSubtitle">Get updates, promotions, and automotive content.</p>
+
+        <form id="ajaxForm">
+
+          <label>
+            Full Name
+            <input type="text" name="fullname" required>
+          </label>
+
+          <label>
+            Email Address
+            <input type="email" name="email" required>
+          </label>
+
+          <button type="submit" class="submit-btn-modern">Submit</button>
+
+          <div class="checkmark-wrapper">
+            <div id="successCheck" class="success-icon-container">
+              <svg class="success-icon" viewBox="0 0 120 120">
+                
+                <!-- OUTLINE -->
+                <circle class="outline" cx="60" cy="60" r="50" />
+
+                <!-- MASK FOR RADIAL FILL -->
+                <mask id="circleFillMask">
+                  <circle class="fill-mask" cx="60" cy="60" r="50"/>
+                </mask>
+
+                <!-- GREEN FILL -->
+                <circle class="filled-circle" cx="60" cy="60" r="50" mask="url(#circleFillMask)" />
+
+                <!-- CHECKMARK -->
+                <path class="checkmark-svg" d="M40 62 L55 78 L82 45" />
+
+              </svg>
+            </div>
+          </div>
+
+          <p id="formSuccess" class="success-msg">You're in! Thanks for subscribing.</p>
+        </form>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="site-container">
+        <p>
+          &copy; 2025 &bull; Zach Johnson &bull; Web Essentials
+        </p>
+      </div>
+    </footer>
+
+
+    <!--  Mobile Menu -->
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector("nav ul");
+
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+
+    <!--  Newsletter Popup -->
+    <script>
+      const modal = document.getElementById("modalBackdrop");
+      const openBtn = document.getElementById("openFormBtn");
+      const closeBtn = document.getElementById("closeFormBtn");
+      const form = document.getElementById("ajaxForm");
+      const successMsg = document.getElementById("formSuccess");
+
+      // open btn
+      openBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"
+      });
+
+      // close btn
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      });
+
+      // close pop-up on backdrop
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "";
+        }
+      });
+
+      // form submission
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        await new Promise(r => setTimeout(r, 700));
+
+        // Hide form fields + button
+        form.querySelectorAll("label, input, button, select, textarea")
+            .forEach(el => el.style.display = "none");
+
+        // Hide subtitle text
+        document.getElementById("signupSubtitle").style.display = "none";
+
+        // Show green checkmark
+        document.querySelector(".checkmark-wrapper").style.display = "flex";
+        document.getElementById("successCheck").style.display = "flex";
+
+        // Show success message BELOW the checkmark
+        successMsg.style.display = "block";
+        successMsg.style.animation = "successFadeUp 0.35s ease-out forwards";
+        successMsg.style.textAlign = "center";
+        successMsg.style.marginTop = "1rem";
+
+        form.reset();
+      });
+
+    </script>
+
+  </body>
+
+</html>

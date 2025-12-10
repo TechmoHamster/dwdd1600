@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CarGuyz: Ultimate Car Enthusiast Hub</title>
+    <meta name="author" content="Zach Johnson">
+    <meta name="description" content="CarGuyz is the ultimate car enthusiast hub for builds, meets, and tuning tips.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- start the page head --> 
+    <header>
+      <div class="site-container">
+        <div class="logo-group">
+          <img src="pics/logo.png" alt="CarGuyz Logo" class="site-logo">
+          <div class="site-title">
+            <h1>Car Guyz</h1>
+            <p>Ultimate Enthusiast Site</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- start the page navigation -->  
+    <nav>
+      <div class="site-container"></div>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <div class="bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <span class="menu-label">Menu</span>
+        </button>
+        <ul>
+          <li><a href="index.html">Car Enthuiast Hub</a></li>
+          <li><a class="active" href="garage.html">Garage &amp; Builds</a></li>
+          <li><a href="featured.html">Featured Cars</a></li>
+          <li><a href="magazine.html">Magazine</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="location.html">Location</a></li>   
+        </ul>
+      </div>
+    </nav>
+
+    <!-- start the page main content -->
+    <main>
+      <h1>Inside the CarGuyz Garage</h1>
+
+      <h2>Featured Build: Street-Friendly Mustang</h2>
+      <p>
+        This build focuses on a street-friendly setup with a balance of comfort and performance.
+        The goal is to create a car that feels responsive and fun without becoming a harsh, unreliable daily driver.
+      </p>
+
+      <h2>Stage 1: Must-Have Tools</h2>
+      <p>
+        Before you start turning wrenches, make sure you have a few basic tools on hand. Having the right tools
+        saves time, frustration, and sometimes your knuckles.
+      </p>
+
+      <!-- Unordered list -->
+      <ul>
+        <li>Jack and jack stands rated for your vehicle weight</li>
+        <li>Metric and SAE socket set</li>
+        <li>Torque wrench for critical bolts</li>
+        <li>Shop light or headlamp</li>
+      </ul>
+
+      <h2>Stage 2: Popular First Mods</h2>
+      <p>
+        Most enthusiasts begin with these simple but effective upgrades:
+      </p>
+
+      <!-- Ordered list -->
+      <ol>
+        <li>Performance exhaust for better sound and flow.</li>
+        <li>Lowering springs or coilovers to improve handling.</li>
+        <li>Upgraded brake pads and rotors for better stopping power.</li>
+        <li>Wider, grippier tires to put power to the ground.</li>
+      </ol>
+
+      <h2>Garage Safety &amp; Etiquette</h2>
+
+      <p>
+        Safety in the garage is not optional. Always support the car correctly, keep your workspace organized, 
+        and never rush a job because you are tired. Your build will still be there tomorrow.
+      </p>
+
+      <p>
+        If you are new to working on cars, consider watching instructional videos from trusted creators on 
+        <a href="https://www.youtube.com" target="_blank">YouTube</a> or reading guides on 
+        <a href="https://www.howstuffworks.com" target="_blank">HowStuffWorks</a>.
+      </p>
+
+      <p>
+        Remember, <strong>no build is worth getting hurt over</strong>. Take your time, double-check your work, 
+        and do not be afraid to ask for help from more experienced friends or local shops.
+      </p>
+      <br>
+      <hr>
+      <p>
+        <strong>Want to join a loal cruise?</strong> Looking for local meetups that feel inclusive & releaxed? Come join our weekend meetups!
+      </p>
+      <br>
+      <address class="meetup-info">
+        CarGuyz Cruise Meetup • Saturdays at 7:00 PM • Main Street Lot • Lehi, UT
+      </address>
+
+      <ul class="safety-list">
+        <li>Show up on time</li>
+        <li>Be respectful</li>
+        <li>Represent the CarGuyz name well</li>
+      </ul>
+
+    </main>
+
+    <footer>
+      <div class="site-container">
+        <p>
+          &copy; 2025 &bull; Zach Johnson &bull; Web Essentials
+        </p>
+      </div>
+    </footer>
+
+    <!--  Mobile Menu -->
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector("nav ul");
+
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+
+    <!--  Newsletter Popup -->
+    <script>
+      const modal = document.getElementById("modalBackdrop");
+      const openBtn = document.getElementById("openFormBtn");
+      const closeBtn = document.getElementById("closeFormBtn");
+      const form = document.getElementById("ajaxForm");
+      const successMsg = document.getElementById("formSuccess");
+
+      // open btn
+      openBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"
+      });
+
+      // close btn
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      });
+
+      // close pop-up on backdrop
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "";
+        }
+      });
+
+      // form submission
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        await new Promise(r => setTimeout(r, 700));
+
+        // Hide form fields + button
+        form.querySelectorAll("label, input, button, select, textarea")
+            .forEach(el => el.style.display = "none");
+
+        // Hide subtitle text
+        document.getElementById("signupSubtitle").style.display = "none";
+
+        // Show green checkmark
+        document.querySelector(".checkmark-wrapper").style.display = "flex";
+        document.getElementById("successCheck").style.display = "flex";
+
+        // Show success message BELOW the checkmark
+        successMsg.style.display = "block";
+        successMsg.style.animation = "successFadeUp 0.35s ease-out forwards";
+        successMsg.style.textAlign = "center";
+        successMsg.style.marginTop = "1rem";
+
+        form.reset();
+      });
+
+    </script>
+  
+  </body>
+
+</html>

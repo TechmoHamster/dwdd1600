@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CarGuyz: Ultimate Car Enthusiast Hub</title>
+    <meta name="author" content="Zach Johnson">
+    <meta name="description" content="CarGuyz is the ultimate car enthusiast hub for builds, meets, and tuning tips.">
+    <meta http-equiv="refresh" content="5; url=index.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- start the page head -->
+    <header>
+      <div class="site-container">
+        <div class="logo-group">
+          <img src="pics/logo.png" alt="CarGuyz Logo" class="site-logo">
+          <div class="site-title">
+            <h1>Car Guyz</h1>
+            <p>Ultimate Enthusiast Site</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- start the page navigation -->
+    <nav>
+      <div class="site-container"></div>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+          <div class="bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <span class="menu-label">Menu</span>
+        </button>
+        <ul>
+          <li><a href="index.html">Car Enthuiast Hub</a></li>
+          <li><a href="garage.html">Garage &amp; Builds</a></li>
+          <li><a href="featured.html">Featured Cars</a></li>
+          <li><a class="active" href="magazine.html">Magazine</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="location.html">Location</a></li>   
+        </ul>
+      </div>
+    </nav>
+
+    <!-- start the page main content -->
+    <main class="thanks-main">
+      <h1>Thank You!</h1>
+      <p>Your CarGuyz Magazine subscription request has been received.</p>
+      <p>You will be redirected to the home page shortly.</p>
+    </main>
+
+
+    <footer>
+        <p>
+          &copy; 2025 &bull; Zach Johnson &bull; Web Essentials
+        </p>
+    </footer>
+
+    <!--  Mobile Menu -->
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector("nav ul");
+
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        navMenu.classList.toggle("open");
+      });
+    </script>
+    
+    <!--  Newsletter Popup -->
+    <script>
+      const modal = document.getElementById("modalBackdrop");
+      const openBtn = document.getElementById("openFormBtn");
+      const closeBtn = document.getElementById("closeFormBtn");
+      const form = document.getElementById("ajaxForm");
+      const successMsg = document.getElementById("formSuccess");
+
+      // open btn
+      openBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"
+      });
+
+      // close btn
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      });
+
+      // close pop-up on backdrop
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "";
+        }
+      });
+
+      // form submission
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        await new Promise(r => setTimeout(r, 700));
+
+        // Hide form fields + button
+        form.querySelectorAll("label, input, button, select, textarea")
+            .forEach(el => el.style.display = "none");
+
+        // Hide subtitle text
+        document.getElementById("signupSubtitle").style.display = "none";
+
+        // Show green checkmark
+        document.querySelector(".checkmark-wrapper").style.display = "flex";
+        document.getElementById("successCheck").style.display = "flex";
+
+        // Show success message BELOW the checkmark
+        successMsg.style.display = "block";
+        successMsg.style.animation = "successFadeUp 0.35s ease-out forwards";
+        successMsg.style.textAlign = "center";
+        successMsg.style.marginTop = "1rem";
+
+        form.reset();
+      });
+
+    </script>
+
+  </body>
+
+</html>
