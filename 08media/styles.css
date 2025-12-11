@@ -195,6 +195,10 @@ p {
   font-size: 1rem;
 }
 
+/* audio section - videos pg */
+.audio_text p {
+  padding-bottom: 1.2rem;
+}
 
 /* =============================== */
 /*  LIST & TABLE STYLES            */
@@ -379,6 +383,7 @@ main a:hover {
   width: 100%;
   padding-bottom: 56.25%;
   margin: 2rem 0;
+  margin-top: 0;
 }
 
 .map-container iframe {
@@ -388,10 +393,6 @@ main a:hover {
   width: 100%;
   height: 100%;
   border: 0;
-}
-
-.audio p {
-   padding-bottom: 1.3rem;
 }
 
 /* =============================== */
@@ -495,7 +496,7 @@ main a:hover {
   max-width: 450px;
   position: relative;
   animation: fadeUp 0.25s ease-out;
-  box-shadow: ;
+  box-shadow: 0;
 }
 
 /* text padding */
@@ -692,10 +693,6 @@ main a:hover {
 /* =============================== */
 
 footer {
-    clear: both;
-}
-
-footer {
   background-color: var(--color-footer-bg);
   text-align: center;
   padding: 0.8rem 0.5rem;
@@ -706,18 +703,37 @@ footer p {
   margin: 0;
 }
 
-/* =============================== */
-/*  FOOTER                         */
-/* =============================== */
-footer {
-  background-color: var(--color-footer-bg);
-  text-align: center;
-  padding: 0.8rem 0.5rem;
-  font-size: 0.9rem;
+/* car hub - info */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
 }
 
-footer p {
-  margin: 0;
+
+.info-text {
+  flex: 1;
+}
+
+/* hub - button styling */
+.middle-news-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-right: 10%;
+  border-radius: 0.5rem;
+}
+
+/* contact - button styling */
+.contact-news-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
 }
 
 /* ============================= */
@@ -766,7 +782,7 @@ footer p {
 }
 
 /* ========== MOBILE NAV ========== */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   
   /* ----- Nav & Links----- */
   nav .site-container {
@@ -859,6 +875,22 @@ footer p {
     opacity: 0;
   }
 
+  .newsletter-section {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .newsletter-text {
+    width: 100%;
+  }
+
+  .middle-news-btn {
+    align-self: center;
+    margin-top: 1.5rem;
+  }
 }
 
 /* ========== MEDIA QUERIES ========== */
