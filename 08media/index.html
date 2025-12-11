@@ -27,13 +27,13 @@
 
     <!-- start the page navigation -->
     <nav>
-      <div class="site-container"></div>
+      <div class="site-container">
         <button class="nav-toggle" aria-label="Toggle Navigation">
-          <div class="bars">
+          <span class="bars">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-          </div>
+          </span>
           <span class="menu-label">Menu</span>
         </button>
         <ul>
@@ -159,19 +159,28 @@
 
           <button type="submit" class="submit-btn-modern">Submit</button>
 
+          <!-- SUCCESS ICON -->
           <div class="checkmark-wrapper">
             <div id="successCheck" class="success-icon-container">
               <svg class="success-icon" viewBox="0 0 120 120">
                 
                 <!-- OUTLINE -->
-                <circle class="outline" cx="60" cy="60" r="50" />
+                <circle id="outlineCircle" class="outline" cx="60" cy="60" r="50" />
 
-                <!-- MASK FOR RADIAL FILL -->
+                <!-- MASK -->
                 <mask id="circleFillMask">
-                  <circle class="fill-mask" cx="60" cy="60" r="50"/>
+                  <circle class="fill-mask" cx="60" cy="60" r="0">
+                    <animate
+                      id="fillAnim"
+                      attributeName="r"
+                      from="0"
+                      to="50"
+                      dur="0.45s"
+                      fill="freeze" />
+                  </circle>
                 </mask>
 
-                <!-- GREEN FILL -->
+                <!-- FILL -->
                 <circle class="filled-circle" cx="60" cy="60" r="50" mask="url(#circleFillMask)" />
 
                 <!-- CHECKMARK -->
@@ -235,6 +244,13 @@
         }
       });
 
+      // ===============================
+      // SUCCESS ANIMATION LOGIC
+      // ===============================
+
+      // Trigger radial fill when CSS outline animation ends
+      
+
       // form submission
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -249,7 +265,7 @@
         // Hide subtitle text
         document.getElementById("signupSubtitle").style.display = "none";
 
-        // Show green checkmark
+        // Show success icon
         document.querySelector(".checkmark-wrapper").style.display = "flex";
         document.getElementById("successCheck").style.display = "flex";
 
