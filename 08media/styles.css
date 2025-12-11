@@ -52,10 +52,11 @@ body {
 main {
   flex: 1;
   max-width: 920px;
-  margin: 1.5rem auto 2rem auto;
-  padding: 0 1rem 1rem 1rem;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem 1rem;
+  width: 100%;
+  display: block;
 }
-
 
 /* ========== HEADER STYLING ========== */
 
