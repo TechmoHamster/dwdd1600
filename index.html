@@ -1,69 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>dwdd 1600 assignment list page</title>
-	</head>
-	<body>
-		<h1>Zach Johnson Web Essentials Assignment Page</h1>
-		<p><a href="01test">My Test Assignment</a></p>
-		
-		<h3>Module 3</h3>
-		<details>
-			<summary>Assignments</summary>
-			<ul>
-				<li><a href="03hand-coding">Hand Coding Assignment</a></li>
-				<li><a href="03follow-along">03 Follow Along</a></li>
-			</ul>
-		</details>
-		
-		<h3>Module 4</h3>
-		<details>
-			<summary>Assignments</summary>
-			<ul>
-				<li><a href="04follow-along">04 Follow Along</a></li>
-				<li><a href="04intro-css">Introduction to CSS Assignment</a></li>
-			</ul>
-		</details>
-		
-		<h3>Module 5</h3>
-		<details>
-			<summary>Assignments</summary>
-			<ul>
-				<li><a href="05follow-along">05 Follow Along</a></li>
-				<li><a href="05images">Images Assignment</a></li>
-			</ul>
-		</details>
-		
-		<h3>Module 6</h3>
-		<details>
-			<summary>Assignments</summary>
-			<ul>
-				<li><a href="06follow-along">06 Follow Along</a></li>
-				<li><a href="06form">Web Form Assignment</a></li>
-			</ul>
-		</details>
-		
-		<h3>Module 7</h3>
-		<details>
-			<summary>Assignments</summary>
-			<ul>
-				<li><a href="07follow-along">07 Follow Along</a></li>
-		    	<li><a href="07advanced-css">Advanced CSS</a></li>
-			</ul>
-		</details>
-		
-		<h3>Module 8</h3>
-		<details>
-			<summary>Assignments</summary>
-			<ul>
-				<li><a href="08follow-along">08 Follow Along</a></li>
-		    	<li><a href="08media">Media Assignment</a></li>
-			</ul>
-		</details>
-		
-		<h3>Optional Capstone Activity</h3>
-		<p><a href="vacation">Web Site</a></p>
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWDD 1600 Assignments • Zach Johnson</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <div class="header-row">
+          <p class="pill">DWDD 1600 • Portfolio Directory</p>
+          <button class="theme-toggle" type="button" aria-pressed="false">Light mode</button>
+        </div>
+        <h1>Zach Johnson — Web Essentials</h1>
+        <p class="subhead">A curated hub for every module, follow-along, and assignment in the course.</p>
+      </header>
+
+      <section class="grid">
+        <article class="card" tabindex="0" aria-label="Module 3 assignments">
+          <p class="pill pill-strong">Module 3</p>
+          <h3>Foundations & Hand Coding</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Assignments</summary>
+            <ul>
+              <li><a href="03follow-along">03 Follow Along</a></li>
+			  <li><a href="03hand-coding">Hand Coding Assignment <span>HTML muscle memory</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card" tabindex="0" aria-label="Module 4 assignments">
+          <p class="pill pill-strong">Module 4</p>
+          <h3>Styling & Intro to CSS</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Assignments</summary>
+            <ul>
+              <li><a href="04follow-along">04 Follow Along</a></li>
+              <li><a href="04intro-css">Introduction to CSS Assignment <span>Selectors & rules</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card" tabindex="0" aria-label="Module 5 assignments">
+          <p class="pill pill-strong">Module 5</p>
+          <h3>Images & Media</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Assignments</summary>
+            <ul>
+              <li><a href="05follow-along">05 Follow Along</a></li>
+              <li><a href="05images">Images Assignment <span>Optimization</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card" tabindex="0" aria-label="Module 6 assignments">
+          <p class="pill pill-strong">Module 6</p>
+          <h3>Forms & Interactions</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Assignments</summary>
+            <ul>
+              <li><a href="06follow-along">06 Follow Along</a></li>
+              <li><a href="06form">Web Form Assignment <span>Inputs that work</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card" tabindex="0" aria-label="Module 7 assignments">
+          <p class="pill pill-strong">Module 7</p>
+          <h3>Advanced CSS</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Assignments</summary>
+            <ul>
+              <li><a href="07follow-along">07 Follow Along</a></li>
+              <li><a href="07advanced-css">Advanced CSS <span>Modern tricks</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card" tabindex="0" aria-label="Module 8 assignments">
+          <p class="pill pill-strong">Module 8</p>
+          <h3>Media & Motion</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Assignments</summary>
+            <ul>
+              <li><a href="08follow-along">08 Follow Along</a></li>
+              <li><a href="08media">Media Assignment <span>Showcase</span></a></li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card" tabindex="0" aria-label="Capstone project">
+          <p class="pill pill-strong">Capstone</p>
+          <h3>Optional Capstone Activity</h3>
+          <details open>
+            <summary><span class="badge" aria-hidden="true"></span>Project</summary>
+            <ul>
+              <li><a href="vacation">Web Site <span>Final build</span></a></li>
+            </ul>
+          </details>
+        </article>
+      </section>
+    </main>
+    <script>
+      const themeToggle = document.querySelector(".theme-toggle");
+      const bodyEl = document.body;
+      const storedTheme = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+      const setTheme = (mode) => {
+        const isLight = mode === "light";
+        bodyEl.classList.toggle("light", isLight);
+        themeToggle.setAttribute("aria-pressed", String(isLight));
+        themeToggle.textContent = isLight ? "Dark mode" : "Light mode";
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+      };
+
+      setTheme(storedTheme || (prefersLight ? "light" : "dark"));
+
+      themeToggle.addEventListener("click", () => {
+        const next = bodyEl.classList.contains("light") ? "dark" : "light";
+        setTheme(next);
+      });
+
+      const cards = Array.from(document.querySelectorAll(".card"));
+      const focusables = (card) =>
+        Array.from(card.querySelectorAll("summary, a")).filter((el) => !el.hasAttribute("disabled"));
+
+      document.addEventListener("keydown", (event) => {
+        const activeCard = event.target.closest(".card");
+        if (!activeCard) return;
+
+        const index = cards.indexOf(activeCard);
+        const currentFocusables = focusables(activeCard);
+
+        switch (event.key) {
+          case "ArrowRight":
+          case "ArrowDown": {
+            const next = cards[index + 1];
+            if (next) {
+              event.preventDefault();
+              (focusables(next)[0] || next).focus();
+            }
+            break;
+          }
+          case "ArrowLeft":
+          case "ArrowUp": {
+            const prev = cards[index - 1];
+            if (prev) {
+              event.preventDefault();
+              (focusables(prev)[0] || prev).focus();
+            }
+            break;
+          }
+          case "Escape": {
+            const openDetails = activeCard.querySelector("details[open]");
+            if (openDetails) {
+              openDetails.open = false;
+              openDetails.querySelector("summary")?.focus();
+            }
+            break;
+          }
+          case "Enter":
+          case " ": {
+            if (event.target.tagName === "SUMMARY") {
+              event.preventDefault();
+              event.target.parentElement.open = !event.target.parentElement.open;
+            }
+            break;
+          }
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
 </html>
